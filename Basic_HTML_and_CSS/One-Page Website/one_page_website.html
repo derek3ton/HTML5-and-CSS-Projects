@@ -3,7 +3,9 @@
 	<head>
 		<title>Tiger Lily's</title>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="js/one_page_website.js" defer></script>
 	</head>
 	<body>
 	
@@ -30,122 +32,101 @@
 		<!--End Home-->
 		
 		<!--Gallery-->
+		<div id="gallery">
 		<section>
-			<div id="gallery">
-				<h1>Gallery</h1>
-				<div>
-				
-					<!--Photo Container 1-->
-					<div>
-						<div>
-							<img src="./images/thumbs/tiger_1.png" alt="Tiger Lily">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p></p>
-							</div>
-						</div>
+			<div class="row">
+				<div class="column">
+					<img src="./images/thumbs/tiger_1.png" onclick="openModal(); currentSlide(1)" class="hover-shadow">
+				</div>
+				<div class="column">
+					<img src="./images/thumbs/tiger_2.png" onclick="openModal(); currentSlide(2)" class="hover-shadow">
+				</div>
+				<div class="column">
+					<img src="./images/thumbs/tiger_3.png" onclick="openModal(); currentSlide(3)" class="hover-shadow">
+				</div>
+				<div class="column">
+					<img src="./images/thumbs/tiger_4.png" onclick="openModal(); currentSlide(4)" class="hover-shadow">
+				</div>
+				<div class="column">
+					<img src="./images/thumbs/tiger_5.png" onclick="openModal(); currentSlide(5)" class="hover-shadow">
+				</div>
+				<div class="column">
+					<img src="./images/thumbs/tiger_6.png" onclick="openModal(); currentSlide(6)" class="hover-shadow">
+				</div>
+			</div>
+	
+			<!--The Modal/Lightbox--> 
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+	
+					<div class="mySlides">
+						<div class="numbertext">1 / 6</div>
+						<img src="./images/thumbs/tiger_1.png" style="width: 100%">
 					</div>
-					<!--End Photo Container 1-->
-					
-					<!--Photo Container 2-->
-					<div>
-						<div>
-							<img src="./images/thumbs/tiger_2.png" alt="Tiger Lily">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p></p>
-							</div>
-						</div>
+	
+					<div class="mySlides">
+						<div class="numbertext">2 / 6</div>
+						<img src="./images/thumbs/tiger_2.png" style="width: 100%">
 					</div>
-					<!--End Photo Container 2-->
-					
-					<!--Photo Container 3-->
-					<div>
-						<div>
-							<img src="./images/thumbs/tiger_3.png" alt="Tiger Lily">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p></p>
-							</div>
-						</div>
+	
+					<div class="mySlides">
+						<div class="numbertext">3 / 6</div>
+						<img src="./images/thumbs/tiger_3.png" style="width: 100%">
 					</div>
-					<!--End Photo Container 3-->
-					
-					<!--Photo Container 4-->
-					<div>
-						<div>
-							<img src="./images/thumbs/tiger_4.png" alt="Tiger Lily">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p></p>
-							</div>
-						</div>
+	
+					<div class="mySlides">
+						<div class="numbertext">4 / 6</div>
+						<img src="./images/thumbs/tiger_4.png" style="width: 100%">
 					</div>
-					<!--End Photo Container 4-->
-					
-					<!--Photo Container 5-->
-					<div>
-						<div>
-							<img src="./images/thumbs/tiger_5.png" alt="Tiger Lily">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p></p>
-							</div>
-						</div>
+	
+					<div class="mySlides">
+						<div class="numbertext">5 / 6</div>
+						<img src="./images/thumbs/tiger_5.png" style="width: 100%">
 					</div>
-					<!--End Photo Container 5-->
-					
-					<!--Photo Container 6-->
-					<div>
-						<div>
-							<img src="./images/thumbs/tiger_6.png" alt="Tiger Lily">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p></p>
-							</div>
-						</div>
+	
+					<div class="mySlides">
+						<div class="numbertext">6 / 6</div>
+						<img src="./images/thumbs/tiger_6.png" style="width: 100%">
+					</div> 
+	
+					<!--Next/Previous Buttons-->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	
+					<!--Caption Text-->
+					<div class="caption-container">
+						<p id="caption"></p>
 					</div>
-					<!--End Photo Container 6-->
-					
-					<!--Photo Container 7-->
-					<div>
-						<div>
-							<img src="./images/thumbs/tiger_7.png" alt="Tiger Lily">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p></p>
-							</div>
-						</div>
+	
+					<!--Image Controls-->
+					<div class="column">
+						<img class="demo" src="./images/thumbs/tiger_1.png" alt="TigerLily">
 					</div>
-					<!--End Photo Container 7-->
-					
-					<!--Photo Container 8-->
-					<div>
-						<div>
-							<img src="./images/thumbs/tiger_8.png" alt="Tiger Lily">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p></p>
-							</div>
-						</div>
+	
+					<div class="column">
+						<img class="demo" src="./images/thumbs/tiger_2.png" alt="TigerLily">
 					</div>
-					<!--End Photo Container 8-->
-					
-					<!--Photo Container 9-->
-					<div>
-						<div>
-							<img src="./images/thumbs/tiger_9.png" alt="Tiger Lily">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p></p>
-							</div>
-						</div>
+	
+					<div class="column">
+						<img class="demo" src="./images/thumbs/tiger_3.png" alt="TigerLily">
 					</div>
-					<!--End Photo Container 9-->
-					
+	
+					<div class="column">
+						<img class="demo" src="./images/thumbs/tiger_4.png" alt="TigerLily">
+					</div>
+	
+					<div class="column">
+						<img class="demo" src="./images/thumbs/tiger_5.png" alt="TigerLily">
+					</div>
+	
+					<div class="column">
+						<img class="demo" src="./images/thumbs/tiger_6.png" alt="TigerLily">
+					</div>
 				</div>
 			</div>
 		</section>
+		</div>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/mFCGblLJKN0" frameborder="0" allow="accelerometer;
 		autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		<!--End Gallery-->
