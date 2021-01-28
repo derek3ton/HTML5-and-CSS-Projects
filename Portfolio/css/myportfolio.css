@@ -1,11 +1,23 @@
 /*--Generic Styling--*/
+html {
+    scroll-behavior: smooth; 
+}
 
 body {
     margin: 0%;
+    opacity: 1;
+    transition: 2s opacity;  
+    letter-spacing: .2vw;
+    font-family: "Times New Roman", Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+}
+
+body.fade-out {
+    opacity: .1;
+    transition: none;
 }
 
 /*--Heading 1--*/
-
 h1 { 
     text-transform: uppercase;
     font-family: "Trebuchet MS", Optima;
@@ -185,8 +197,8 @@ footer {
     width: 100%;
     padding: 20px;
     position: relative;
-    -webkit-animation: moveVideoText 5.75s;
-    animation: moveVideoText 5.75;
+    -webkit-animation: moveVideoText 5s;
+    animation: moveVideoText 5s;
 }
 
 /*--Screens 576px and smaller will not display the background video.--*/
@@ -206,6 +218,115 @@ footer {
 
 /*--End Video Styling--*/
 
+/*Slideshow styling*/
+#Slideshow_Background {
+    background: rgba(255,255,255,.35);
+}
+ /*Hides slides by default*/
+.mySlides {
+    display: none;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .3}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .3}
+    to {opacity: 1}
+}
+
+#Slideshow_Container {
+    width: 39.5vw;
+    height: auto;
+    position: relative;
+    margin: auto;
+}
+
+.Slideshow_Images {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 12px black;
+    width: auto;
+}
+
+/*Next/Prev buttons*/
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    margin-top: -0vw;
+    color: rgb(212, 32, 32);
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: .5s ease;
+}
+
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.Previous:hover, .Next:hover {
+    background-color: black;
+    color: white;
+}
+
+.text { 
+    color: white;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    background-color: black;
+    font-weight: bold;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.Slide_Number {
+    color: white;
+    position: absolute;
+    top: 0;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw;
+    font-weight: bold;
+    display: none;
+}
+
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.active, .dot:hover {
+    background-color: black;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+
 /*--Table Styling--*/
 
 * {  /*-Asterik is a universal selector that applies effect to all elements on the page.-*/ 
@@ -214,6 +335,7 @@ footer {
 
 .column_1 {
     float: left;
+    text-align: center;
     width: 50%;
     padding: 10px;
     padding-top: 3%;
